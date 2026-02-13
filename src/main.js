@@ -340,7 +340,7 @@ function displayMessages(){
       setAria('.downvote-mobile');
     }
     saveToStorage('messages1358szaq1tritujfdcx2',elementsData.newJsonData);
-    addButtonsEvents();
+    //addButtonsEvents();
     //console.log(elementsData.displayMessages.innerHTML);
 }
 
