@@ -152,7 +152,7 @@ function getGeneratedHTML(insert,which){
               <div class='display-flex justify-content-space-between'>
                 <div class='display-flex align-items-center'>
                   <div class='desktop'>
-                    <div class='display-flex flex-column mx-3 align-items-center darker-white-background js-score-desktop' id='${insert.id}' >
+                    <div class='display-flex flex-column ms-3 align-items-center darker-white-background js-score-desktop' id='${insert.id}' >
                       <button aria-label='Comment upvote' type='button' class='upvote-desktop darker-white-background'><svg class='darker-white-background' width="11" height="11" xmlns="http://www.w3.org/2000/svg"><path d="M6.33 10.896c.137 0 .255-.05.354-.149.1-.1.149-.217.149-.354V7.004h3.315c.136 0 .254-.05.354-.149.099-.1.148-.217.148-.354V5.272a.483.483 0 0 0-.148-.354.483.483 0 0 0-.354-.149H6.833V1.4a.483.483 0 0 0-.149-.354.483.483 0 0 0-.354-.149H4.915a.483.483 0 0 0-.354.149c-.1.1-.149.217-.149.354v3.37H1.08a.483.483 0 0 0-.354.15c-.1.099-.149.217-.149.353v1.23c0 .136.05.254.149.353.1.1.217.149.354.149h3.333v3.39c0 .136.05.254.15.353.098.1.216.149.353.149H6.33Z" fill="#C5C6EF"/></svg></button>
                       <span title='Comment score' data-value='${insert.score}'>${insert.score}</span>
                       <button aria-label='Comment downvote' type='button' class='downvote-desktop darker-white-background'><svg class='darker-white-background' svg width="11" height="3" xmlns="http://www.w3.org/2000/svg"><path d="M9.256 2.66c.204 0 .38-.056.53-.167.148-.11.222-.243.222-.396V.722c0-.152-.074-.284-.223-.395a.859.859 0 0 0-.53-.167H.76a.859.859 0 0 0-.53.167C.083.437.009.57.009.722v1.375c0 .153.074.285.223.396a.859.859 0 0 0 .53.167h8.495Z" fill="#C5C6EF"/></svg></button>
@@ -163,8 +163,8 @@ function getGeneratedHTML(insert,which){
                   <span class='ms-3 me-1'>${insert.user.username}</span>
                   <span> ${pastDate(insert.createdAt)}</span>
                 </div>
-                <div  class='desktop' >
-                  <svg width="14" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M.227 4.316 5.04.16a.657.657 0 0 1 1.085.497v2.189c4.392.05 7.875.93 7.875 5.093 0 1.68-1.082 3.344-2.279 4.214-.373.272-.905-.07-.767-.51 1.24-3.964-.588-5.017-4.829-5.078v2.404c0 .566-.664.86-1.085.496L.227 5.31a.657.657 0 0 1 0-.993Z" fill="#5357B6"/></svg>
+                <div  class='desktop margin-desktop' >
+                  <svg  width="14" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M.227 4.316 5.04.16a.657.657 0 0 1 1.085.497v2.189c4.392.05 7.875.93 7.875 5.093 0 1.68-1.082 3.344-2.279 4.214-.373.272-.905-.07-.767-.51 1.24-3.964-.588-5.017-4.829-5.078v2.404c0 .566-.664.86-1.085.496L.227 5.31a.657.657 0 0 1 0-.993Z" fill="#5357B6"/></svg>
                   <button type='button' class='js-reply-desktop'>Reply</button>
                 </div>
               </div>
@@ -185,16 +185,15 @@ function getGeneratedHTML(insert,which){
             </div>
             <div class='hidden reply off-white-background'>
                 <form class='display-flex js-display-reply' method='post' action='#'>
-                  <img src='${elementsData.currentUser.image.png}' alt='User avatar' width='64' height='64'> 
-                  <label for='${textlabel1}' class='visually-hidden'>User comment</label>
-                  <textarea id='${textlabel1}' class='w-100 off-white-background' ></textarea>
-                  <button title='Submit reply' type='button' class='js-submit-reply'>Reply</button>
+                    <img src='${elementsData.currentUser.image.png}' alt='User avatar' width='64' height='64'> 
+                    <label for='${textlabel1}' class='visually-hidden'>User comment</label>
+                    <textarea id='${textlabel1}' class='w-100 off-white-background' ></textarea>
+                    <button title='Submit reply' type='button' class='js-submit-reply'>Reply</button>
+                     <button title='Cancel reply' type='button' class='js-cancel-reply'>Cancel</button>
                 </form>
-                <div class='display-flex justify-content-flex-end'>
-                   <button title='Cancel reply' type='button' class='js-cancel-reply'>Cancel</button>
-                </div>
-                 </div>
-              </div><br>`;
+                
+            </div>
+        </div><br>`;
        
   }
   
@@ -206,12 +205,12 @@ function getGeneratedHTML(insert,which){
                   <div class='display-flex justify-content-space-between'>
                     <div class='display-flex align-items-center'>
                         <div class='desktop'>
-                        <div class='display-flex flex-column mx-3 align-items-center darker-white-background js-score-desktop' id='${insert.id}' >
-                          <button aria-label='Comment upvote' type='button' class='upvote-desktop darker-white-background'><svg class='darker-white-background' width="11" height="11" xmlns="http://www.w3.org/2000/svg"><path d="M6.33 10.896c.137 0 .255-.05.354-.149.1-.1.149-.217.149-.354V7.004h3.315c.136 0 .254-.05.354-.149.099-.1.148-.217.148-.354V5.272a.483.483 0 0 0-.148-.354.483.483 0 0 0-.354-.149H6.833V1.4a.483.483 0 0 0-.149-.354.483.483 0 0 0-.354-.149H4.915a.483.483 0 0 0-.354.149c-.1.1-.149.217-.149.354v3.37H1.08a.483.483 0 0 0-.354.15c-.1.099-.149.217-.149.353v1.23c0 .136.05.254.149.353.1.1.217.149.354.149h3.333v3.39c0 .136.05.254.15.353.098.1.216.149.353.149H6.33Z" fill="#C5C6EF"/></svg></button>
-                          <span title='Comment score' data-value='${insert.score}'>${insert.score}</span>
-                          <button aria-label='Comment downvote' type='button' class='downvote-desktop darker-white-background'><svg class='darker-white-background' svg width="11" height="3" xmlns="http://www.w3.org/2000/svg"><path d="M9.256 2.66c.204 0 .38-.056.53-.167.148-.11.222-.243.222-.396V.722c0-.152-.074-.284-.223-.395a.859.859 0 0 0-.53-.167H.76a.859.859 0 0 0-.53.167C.083.437.009.57.009.722v1.375c0 .153.074.285.223.396a.859.859 0 0 0 .53.167h8.495Z" fill="#C5C6EF"/></svg></button>
-                        </div>
+                          <div class='display-flex flex-column ms-3 align-items-center darker-white-background js-score-desktop' id='${insert.id}' >
+                            <button aria-label='Comment upvote' type='button' class='upvote-desktop darker-white-background'><svg class='darker-white-background' width="11" height="11" xmlns="http://www.w3.org/2000/svg"><path d="M6.33 10.896c.137 0 .255-.05.354-.149.1-.1.149-.217.149-.354V7.004h3.315c.136 0 .254-.05.354-.149.099-.1.148-.217.148-.354V5.272a.483.483 0 0 0-.148-.354.483.483 0 0 0-.354-.149H6.833V1.4a.483.483 0 0 0-.149-.354.483.483 0 0 0-.354-.149H4.915a.483.483 0 0 0-.354.149c-.1.1-.149.217-.149.354v3.37H1.08a.483.483 0 0 0-.354.15c-.1.099-.149.217-.149.353v1.23c0 .136.05.254.149.353.1.1.217.149.354.149h3.333v3.39c0 .136.05.254.15.353.098.1.216.149.353.149H6.33Z" fill="#C5C6EF"/></svg></button>
+                            <span title='Comment score' data-value='${insert.score}'>${insert.score}</span>
+                            <button aria-label='Comment downvote' type='button' class='downvote-desktop darker-white-background'><svg class='darker-white-background' svg width="11" height="3" xmlns="http://www.w3.org/2000/svg"><path d="M9.256 2.66c.204 0 .38-.056.53-.167.148-.11.222-.243.222-.396V.722c0-.152-.074-.284-.223-.395a.859.859 0 0 0-.53-.167H.76a.859.859 0 0 0-.53.167C.083.437.009.57.009.722v1.375c0 .153.074.285.223.396a.859.859 0 0 0 .53.167h8.495Z" fill="#C5C6EF"/></svg></button>
                           </div>
+                        </div>
                       <img class='ms-3' src='${insert.user.image.png}' alt='User avatar' width='64' height='64'> 
                       <span class='ms-3 me-1'>${insert.user.username}</span>
                       <span class='you white-font'>You</span>
@@ -229,14 +228,14 @@ function getGeneratedHTML(insert,which){
                     </div>
                   </div>
 
-                  <form class='display-flex flex-column' method='post' action='#'>
+                  <form class='display-flex justify-content-space-between align-items-sm-flex-start' method='post' action='#'>
                     <div id='${insert.id}'>
                          <label for='${textlabel2}' class='visually-hidden'>Current user's comment to a reply</label>
                          <span class='reply'>${insert.replyingTo}</span>
-                         <textarea   id='${textlabel2}' class='move-down user-text currentuser-old-reply smaller-width move-right off-white-background '> ${insert.content}</textarea>
+                         <textarea   id='${textlabel2}' class='move-down user-text currentuser-old-reply smaller-width move-right off-white-background height-5'> ${insert.content}</textarea>
                       
                     </div>
-                    <div class='display-flex justify-content-flex-end'>
+                    <div class='display-flex'>
                       <button title='Update comment' type='button' class='js-update hidden'>Update</button>
                       <button title='Cancel update comment' type='button' class='js-edit-cancel hidden'>Cancel</button>
                     </div>
@@ -334,13 +333,13 @@ function displayMessages(){
     elementsData.displayMessages.innerHTML = elementsData.messagesHTML;
     if(document.getElementById('main').offsetWidth>768){
             setAria('.upvote-desktop');
-        setAria('.downvote-desktop');
+           setAria('.downvote-desktop');
     }else{
       setAria('.upvote-mobile');
       setAria('.downvote-mobile');
     }
     saveToStorage('messages1358szaq1tritujfdcx2',elementsData.newJsonData);
-    //addButtonsEvents();
+    addButtonsEvents();
     //console.log(elementsData.displayMessages.innerHTML);
 }
 
@@ -348,26 +347,26 @@ function displayMessages(){
 
 //only used to add the aria-disabled attribute to  the currentuser upvote/downvote buttons
 const setAria=(el)=>{
-  let screensize='';
+    let screensize='';
     const votesHtmlContainer = document.querySelectorAll(el);
-  const nodes = Array.from(votesHtmlContainer);
-  if(document.getElementById('main').offsetWidth>768){
-      //desktop
-      screensize='desktop';    
-  }
+    const nodes = Array.from(votesHtmlContainer);
+    if(document.getElementById('main').offsetWidth>768){
+        //desktop
+        screensize='desktop';    
+    }
   
-  elementsData.newJsonData.comments.forEach((comment)=>{
-    for(const node of nodes){
-      let id='';
-      if(screensize==='desktop'){
-        id = node.parentNode.parentNode.parentNode.parentNode.parentNode.id;
-      }else{
-        id = node.parentNode.parentNode.parentNode.parentNode.id;
-      }
-      if((Number(id)===Number(comment.id)) && (comment.user.username===elementsData.currentUser.username)){
-        node.setAttribute("aria-disabled", "true");
-      }
-    }		
+    elementsData.newJsonData.comments.forEach((comment)=>{
+      for(const node of nodes){
+        let id='';
+        if(screensize==='desktop'){
+          id = node.parentNode.parentNode.parentNode.parentNode.parentNode.id;
+        }else{
+          id = node.parentNode.parentNode.parentNode.parentNode.id;
+        }
+        if((Number(id)===Number(comment.id)) && (comment.user.username===elementsData.currentUser.username)){
+          node.setAttribute("aria-disabled", "true");
+        }
+      }		
     
     if(comment.replies.length>0){
       comment.replies.forEach((reply)=>{
@@ -508,10 +507,12 @@ function addButtonsEvents(){
   //upvote/downvote apply to both currentuser comments and other user comments.      //id at line 144.
   //user clicks upvote button, either in mobile or desktop view
   let whichupvote= (document.getElementById('main').offsetWidth<=768)? 'upvote-mobile':'upvote-desktop';
-    let upvoteHTMLCollection = document.getElementsByClassName(whichupvote);
+  console.log('whichupvote:',whichupvote);
+  let upvoteHTMLCollection = document.getElementsByClassName(whichupvote);
   let upvoteNodes = Array.from(upvoteHTMLCollection);
 
   let jsScore =  (document.getElementById('main').offsetWidth<=768)? '.js-score-mobile':'.js-score-desktop';
+  console.log('jssocore',jsScore);
 
 
   upvoteNodes.forEach((btn,index)=>{  
@@ -527,7 +528,7 @@ function addButtonsEvents(){
             let parent='';
             if(document.getElementById('main').offsetWidth>768){
                //desktop
-                             parent =event.target.parentElement.parentElement.parentElement.parentElement.parentElement;    
+                parent =event.target.parentElement.parentElement.parentElement.parentElement.parentElement;    
             }else{
                //mobile
               parent =event.target.parentElement.parentElement.parentElement.parentElement;
@@ -559,7 +560,7 @@ function addButtonsEvents(){
             let parent='';
             if(document.getElementById('main').offsetWidth>768){
                //if desktop
-                             parent =event.target.parentElement.parentElement.parentElement.parentElement.parentElement;
+                 parent =event.target.parentElement.parentElement.parentElement.parentElement.parentElement;
             }else{
                parent =event.target.parentElement.parentElement.parentElement.parentElement;
             }
@@ -623,6 +624,7 @@ function addButtonsEvents(){
 
   //user clicks reply button, either in mobile or desktop view
   let whichreply= (document.getElementById('main').offsetWidth<=768)? 'js-reply-mobile':'js-reply-desktop';
+  console.log(whichreply);
     let replyHTMLCollection = document.getElementsByClassName(whichreply);
   let replyNodes = Array.from(replyHTMLCollection);
   replyNodes.forEach((btn,index)=>{
