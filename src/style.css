@@ -163,6 +163,9 @@ main{
 textarea:focus{
      border: 2px solid grey;
 }
+textarea:hover{
+     cursor:pointer;
+}
 .js-edit-mobile:hover,.js-edit-desktop:hover{
      color: hsl(216, 96%, 57%);
 }
