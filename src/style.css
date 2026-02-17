@@ -137,6 +137,10 @@ br{
      color: hsl(355, 91%, 60%);
 }
 
+.edit-border{
+     border: 2px solid grey;
+}
+
 main{
   margin:0 auto;
   margin-top: 1.25em;
