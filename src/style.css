@@ -101,9 +101,9 @@ br{
 }
 
 /*buttons*/
-.not-allowed{
+/*.not-allowed{
     cursor:not-allowed;
-}
+}*/
 .js-yes{
     background-color: hsl(0, 1%, 57%);
     width:8em;
@@ -162,7 +162,7 @@ main{
 textarea:focus{
      border: 2px solid grey;
 }
-.js-delete-mobile:hover,.js-delete-desktop:hover{
+/*.js-delete-mobile:hover,.js-delete-desktop:hover{
      color: hsl(355, 74%, 71%);
 }
 .js-edit-mobile:hover,.js-edit-desktop:hover{
@@ -170,7 +170,7 @@ textarea:focus{
 }
 .reply:hover,.js-add-comment:hover{
      color: hsl(216, 86%, 75%); 
-}
+}*/
 #bottom-footer {
   .attribution {
     font-size: 0.5em;
