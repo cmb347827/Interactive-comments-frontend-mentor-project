@@ -528,11 +528,11 @@ function addButtonsEvents(){
 
 
   upvoteNodes.forEach((btn,index)=>{  
-      const upid = btn.closest('div').id;
+      /*const upid = btn.closest('div').id;
       const upuser = findUserNonAsync(upid);
       if(upuser ===elementsData.currentUser.username){
           btn.classList.add('not-allowed');
-      }
+      }*/
       btn.addEventListener('click', async (event) => {
           const id = event.target.closest('div').id;
           let user = await findUser(id);
@@ -565,11 +565,11 @@ function addButtonsEvents(){
   let downvoteNodes = Array.from(downvoteHTMLCollection);
 
   downvoteNodes.forEach((btn,index)=>{
-          const downid = btn.closest('div').id;
+          /*const downid = btn.closest('div').id;
           const downuser = findUserNonAsync(downid);
           if(downuser ===elementsData.currentUser.username){
               btn.classList.add('not-allowed');
-          }
+          }*/
           btn.addEventListener('click',async (event)=>{
               const id = event.target.closest('div').id;
               let user = await findUser(id);
@@ -698,9 +698,9 @@ function addButtonsEvents(){
       btn.addEventListener("click", ()=>{
         //edit button is pressed, toggle textarea to disabled/abled or abled/disabled.
         toggleBtns(textareaNodes,jscancelNodes,jsupdateNodes,index);
-        if(!textareaNodes[index].classList.contains('edit-border')){
+        /*if(!textareaNodes[index].classList.contains('edit-border')){
             textareaNodes[index].classList.add('edit-border'); 
-        }
+        }*/
       });
       let firstspace=''; let id='';
       (jsupdateNodes[index]).addEventListener('click',()=>{
@@ -739,9 +739,9 @@ function addButtonsEvents(){
        (jscancelNodes[index]).addEventListener('click',()=>{
                 //the user clicks the current cancel edit button
           toggleBtns(textareaNodes,jscancelNodes,jsupdateNodes,index);
-          if(textareaNodes[index].classList.contains('edit-border')){
+          /*if(textareaNodes[index].classList.contains('edit-border')){
               textareaNodes[index].classList.remove('edit-border'); 
-          }
+          }*/
 
        });
 
