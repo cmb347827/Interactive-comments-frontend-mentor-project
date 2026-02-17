@@ -130,6 +130,9 @@ br{
 .js-edit-mobile,.js-edit-desktop,.js-reply-mobile, .js-reply-desktop, .reply{
      color: hsl(216, 81%, 44%);
 }
+.js-edit-mobile:hover,.js-edit-desktop:hover{
+     color: hsl(216, 96%, 57%);
+}
 .reply:hover,.js-add-comment:hover{
      color: hsl(216, 86%, 75%); 
 }

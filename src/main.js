@@ -698,8 +698,9 @@ function addButtonsEvents(){
       btn.addEventListener("click", ()=>{
         //edit button is pressed, toggle textarea to disabled/abled or abled/disabled.
         toggleBtns(textareaNodes,jscancelNodes,jsupdateNodes,index);
-        textareaNodes[index].classList.toggle('edit-border'); 
-        console.log(textareaNodes[index]);
+        if(!textareaNodes[index].classList.contains('edit-border')){
+            textareaNodes[index].classList.add('edit-border'); 
+        }
       });
       let firstspace=''; let id='';
       (jsupdateNodes[index]).addEventListener('click',()=>{
@@ -738,6 +739,10 @@ function addButtonsEvents(){
        (jscancelNodes[index]).addEventListener('click',()=>{
                 //the user clicks the current cancel edit button
           toggleBtns(textareaNodes,jscancelNodes,jsupdateNodes,index);
+          if(textareaNodes[index].classList.contains('edit-border')){
+              textareaNodes[index].classList.remove('edit-border'); 
+          }
+
        });
 
   });
