@@ -121,10 +121,9 @@ br{
 }
 
 /*font color change*/
-.js-delete,.js-edit,.reply{
-     color: hsl(216, 100%, 50%);
-     font-size: 1.2em;
-     font-weight:600;
+.reply{
+    font-size: 1.1em;
+    font-weight:600;
 }
 
 
