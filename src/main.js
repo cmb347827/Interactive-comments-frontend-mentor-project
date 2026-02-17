@@ -269,7 +269,7 @@ function getGeneratedHTML(insert,which){
       <div class='textgrid w-100'>
          <img src='${insert.image.png}' alt='User avatar' width='64' height='64' class='send area-img'> 
          <textarea id='${textlabel3}' class='currentuser-new-message w-100 off-white-background area-text'></textarea>
-         <button title='Submit new comment' type='button' class='js-add-comment area-button grid-item'>Send</button>
+         <button title='Submit new comment' type='submit' class='js-add-comment area-button grid-item'>Send</button>
       </div>
         </form>`;
   }
