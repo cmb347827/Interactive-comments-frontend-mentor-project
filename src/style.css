@@ -165,6 +165,9 @@ textarea:focus{
 .reply:hover,.js-add-comment:hover{
      color: hsl(216, 86%, 75%); 
 }
+.js-delete-mobile:hover,.js-delete-desktop:hover{
+     color: hsl(355, 74%, 71%);
+}
 #bottom-footer {
   .attribution {
     font-size: 0.5em;
