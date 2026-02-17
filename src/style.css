@@ -101,6 +101,9 @@ br{
 }
 
 /*buttons*/
+.not-allowed{
+    cursor:not-allowed;
+}
 .js-yes{
     background-color: hsl(0, 1%, 57%);
     width:8em;
@@ -115,6 +118,14 @@ br{
     width: 7.25em;
     margin-left:1em;
     border-radius:0.6em;
+}
+.reply{
+    font-size: 1.1em;
+    font-weight:600;
+}
+.js-edit-mobile,.js-edit-desktop,.js-reply-mobile, .js-reply-desktop, .js-delete-mobile, .js-delete-desktop{
+    font-size:1em;
+    font-weight:500;
 }
 
 /*font color change*/
@@ -159,3 +170,6 @@ textarea:focus{
 }
 
 
+.edit-border{
+    border:2px solid gray;
+}

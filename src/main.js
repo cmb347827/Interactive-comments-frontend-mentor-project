@@ -700,6 +700,8 @@ function addButtonsEvents(){
         toggleBtns(textareaNodes,jscancelNodes,jsupdateNodes,index);
         if(!textareaNodes[index].classList.contains('edit-border')){
             textareaNodes[index].classList.add('edit-border'); 
+        }else if(textareaNodes[index].classList.contains('edit-border')){
+             textareaNodes[index].classList.remove('edit-border');
         }
       });
       let firstspace=''; let id='';
