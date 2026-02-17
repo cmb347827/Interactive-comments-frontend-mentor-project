@@ -129,6 +129,14 @@ br{
     font-size:1em;
     font-weight:500;
 }
+/*font color change*/
+.js-edit-mobile,.js-edit-desktop,.js-reply-mobile, .js-reply-desktop, .reply{
+     color: hsl(216, 81%, 44%);
+}
+.js-edit-mobile:hover,.js-edit-desktop:hover{
+     color: hsl(216, 96%, 57%);
+}
+
 
 main{
   margin:0 auto;
