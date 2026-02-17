@@ -147,9 +147,7 @@ main{
     background-color:hsl(0, 0%, 100%);
     
     /*speficify 0,0,2*/
-    &::backdrop {
-       background-color: rgb(0 0 10% / 25%);
-    }
+   
   }
  
   @media (min-width:49.0625em){
