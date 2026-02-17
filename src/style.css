@@ -133,7 +133,9 @@ br{
 .js-edit-mobile,.js-edit-desktop,.js-reply-mobile, .js-reply-desktop, .reply{
      color: hsl(216, 81%, 44%);
 }
-
+.js-delete-mobile, .js-delete-desktop{
+     color: hsl(355, 91%, 60%);
+}
 
 main{
   margin:0 auto;
