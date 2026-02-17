@@ -125,7 +125,10 @@ br{
     font-size: 1.1em;
     font-weight:600;
 }
-
+.js-edit-mobile,.js-edit-desktop,.js-reply-mobile, .js-reply-desktop, .js-delete-mobile, .js-delete-desktop{
+    font-size:1em;
+    font-weight:500;
+}
 
 main{
   margin:0 auto;
