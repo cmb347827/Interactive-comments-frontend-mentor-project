@@ -57,8 +57,10 @@ Users should be able to:
 - static vite site
 - code structure  : setaria + upvotenodes/downvotenodes + getgeneratedhtml
 - all the repeat ids because of my code structure
+- multiple project folders , had to restart also with vite , so commit comments are lacking due to this
 
-todo: style.css on hover styles, 
+
+todo:   js comments, readme.
 
 ### Continued development
 

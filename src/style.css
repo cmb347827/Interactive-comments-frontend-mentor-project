@@ -22,7 +22,6 @@ br{
     line-height: 0.6em;
 }
 
-
 /*specificity    */
 
 .align-items-flex-start{
@@ -101,6 +100,9 @@ br{
 }
 
 /*buttons*/
+.not-allowed{
+    cursor:not-allowed;
+}
 .js-yes{
     background-color: hsl(0, 1%, 57%);
     width:8em;
@@ -116,14 +118,30 @@ br{
     margin-left:1em;
     border-radius:0.6em;
 }
-
-/*font color change*/
-.js-delete,.js-edit,.reply{
-     color: hsl(216, 100%, 50%);
-     font-size: 1.2em;
-     font-weight:600;
+.reply{
+    font-size: 1.1em;
+    font-weight:600;
 }
-
+.js-edit-mobile,.js-edit-desktop,.js-reply-mobile, .js-reply-desktop, .js-delete-mobile, .js-delete-desktop{
+    font-size:1em;
+    font-weight:500;
+}
+/*font color change*/
+.js-edit-mobile,.js-edit-desktop,.js-reply-mobile, .js-reply-desktop, .reply{
+     color: hsl(216, 81%, 44%);
+}
+.reply:hover,.js-add-comment:hover{
+     color: hsl(216, 86%, 75%); 
+}
+.js-delete-mobile, .js-delete-desktop{
+     color: hsl(355, 91%, 60%);
+}
+.js-delete-mobile:hover,.js-delete-desktop:hover{
+     color: hsl(355, 74%, 71%);
+}
+.edit-border{
+     border: 2px solid grey;
+}
 
 main{
   margin:0 auto;
@@ -144,9 +162,13 @@ main{
   }
   
 }
+textarea:hover{
+     cursor:pointer;
+}
 textarea:focus{
      border: 2px solid grey;
 }
+
 
 #bottom-footer {
   .attribution {

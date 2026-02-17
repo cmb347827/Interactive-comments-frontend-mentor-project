@@ -163,12 +163,12 @@ function getGeneratedHTML(insert,which){
                   <span class='ms-3 me-1'>${insert.user.username}</span>
                   <span> ${pastDate(insert.createdAt)}</span>
                 </div>
-                <div  class='desktop margin-desktop' >
+                <div  class='desktop margin-desktop display-flex align-items-center' >
                   <svg  width="14" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M.227 4.316 5.04.16a.657.657 0 0 1 1.085.497v2.189c4.392.05 7.875.93 7.875 5.093 0 1.68-1.082 3.344-2.279 4.214-.373.272-.905-.07-.767-.51 1.24-3.964-.588-5.017-4.829-5.078v2.404c0 .566-.664.86-1.085.496L.227 5.31a.657.657 0 0 1 0-.993Z" fill="#5357B6"/></svg>
                   <button type='button' class='js-reply-desktop'>Reply</button>
                 </div>
               </div>
-              <p class='' ><span class='firstword'> ${innerreply}</span>${insert.content}</p>
+              <p class='ms-3' ><span class='firstword'> ${innerreply}</span> ${insert.content}</p>
               <div class='mobile'>
                  <div class='display-flex justify-content-space-between w-100'>
                     <div class='border-radius-1 display-flex  align-items-center darker-white-background js-score-mobile' id='${insert.id}' >
@@ -177,9 +177,9 @@ function getGeneratedHTML(insert,which){
                      <button aria-label='Comment downvote' type='button' class='downvote-mobile darker-white-background'><svg class='darker-white-background' svg width="11" height="3" xmlns="http://www.w3.org/2000/svg"><path d="M9.256 2.66c.204 0 .38-.056.53-.167.148-.11.222-.243.222-.396V.722c0-.152-.074-.284-.223-.395a.859.859 0 0 0-.53-.167H.76a.859.859 0 0 0-.53.167C.083.437.009.57.009.722v1.375c0 .153.074.285.223.396a.859.859 0 0 0 .53.167h8.495Z" fill="#C5C6EF"/></svg></button>
                      </div>
                       <div  class='w-10 display-flex align-items-center' >
-                     <svg width="14" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M.227 4.316 5.04.16a.657.657 0 0 1 1.085.497v2.189c4.392.05 7.875.93 7.875 5.093 0 1.68-1.082 3.344-2.279 4.214-.373.272-.905-.07-.767-.51 1.24-3.964-.588-5.017-4.829-5.078v2.404c0 .566-.664.86-1.085.496L.227 5.31a.657.657 0 0 1 0-.993Z" fill="#5357B6"/></svg>
-                     <button type='button' class='js-reply-mobile'>Reply</button>
-                    </div>
+                         <svg width="14" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M.227 4.316 5.04.16a.657.657 0 0 1 1.085.497v2.189c4.392.05 7.875.93 7.875 5.093 0 1.68-1.082 3.344-2.279 4.214-.373.272-.905-.07-.767-.51 1.24-3.964-.588-5.017-4.829-5.078v2.404c0 .566-.664.86-1.085.496L.227 5.31a.657.657 0 0 1 0-.993Z" fill="#5357B6"/></svg>
+                         <button type='button' class='js-reply-mobile'>Reply</button>
+                      </div>
                 </div>
               </div>
             </div>
@@ -198,7 +198,7 @@ function getGeneratedHTML(insert,which){
   }
   
   if(which==='reply' || which==='currentuser-comment'){
-                
+          
         return `<div  class=' off-white-background ${addMargin}'>
                 
                 <div id='${insert.id}'>
@@ -217,11 +217,11 @@ function getGeneratedHTML(insert,which){
                       <span>${pastDate(insert.createdAt)}</span>
                     </div>
                     <div class=' desktop '>
-                      <div class='' id='${insert.id}'>
+                      <div class='display-flex align-items-center' id='${insert.id}'>
                         <svg width="12" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M1.167 12.448c0 .854.7 1.552 1.555 1.552h6.222c.856 0 1.556-.698 1.556-1.552V3.5H1.167v8.948Zm10.5-11.281H8.75L7.773 0h-3.88l-.976 1.167H0v1.166h11.667V1.167Z" fill="#ED6368"/></svg>
                         <button title='Delete comment' type='button' class='js-delete-desktop'>Delete</button>
                       </div>
-                      <div class=' '>
+                      <div class='display-flex align-items-center '>
                         <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M13.479 2.872 11.08.474a1.75 1.75 0 0 0-2.327-.06L.879 8.287a1.75 1.75 0 0 0-.5 1.06l-.375 3.648a.875.875 0 0 0 .875.954h.078l3.65-.333c.399-.04.773-.216 1.058-.499l7.875-7.875a1.68 1.68 0 0 0-.061-2.371Zm-2.975 2.923L8.159 3.449 9.865 1.7l2.389 2.39-1.75 1.706Z" fill="#5357B6"/></svg>
                         <button title='Edit comment' type='button' class='js-edit-desktop'>Edit</button>
                       </div>
@@ -229,7 +229,7 @@ function getGeneratedHTML(insert,which){
                   </div>
 
                   <form class='display-flex justify-content-space-between align-items-sm-flex-start' method='post' action='#'>
-                    <div id='${insert.id}'>
+                    <div class='display-flex ms-3' id='${insert.id}'>
                          <label for='${textlabel2}' class='visually-hidden'>Current user's comment to a reply</label>
                          <span class='reply'>${insert.replyingTo}</span>
                          <textarea   id='${textlabel2}' class='move-down user-text currentuser-old-reply smaller-width move-right off-white-background height-5'> ${insert.content}</textarea>
@@ -248,11 +248,11 @@ function getGeneratedHTML(insert,which){
                              <button aria-label='Comment downvote' type='button' class='downvote-mobile darker-white-background'><svg class='darker-white-background' svg width="11" height="3" xmlns="http://www.w3.org/2000/svg"><path d="M9.256 2.66c.204 0 .38-.056.53-.167.148-.11.222-.243.222-.396V.722c0-.152-.074-.284-.223-.395a.859.859 0 0 0-.53-.167H.76a.859.859 0 0 0-.53.167C.083.437.009.57.009.722v1.375c0 .153.074.285.223.396a.859.859 0 0 0 .53.167h8.495Z" fill="#C5C6EF"/></svg></button>
                             </div>
                         <div class='display-flex '>
-                          <div class='' id='${insert.id}'>
+                          <div class='display-flex align-items-center' id='${insert.id}'>
                            <svg width="12" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M1.167 12.448c0 .854.7 1.552 1.555 1.552h6.222c.856 0 1.556-.698 1.556-1.552V3.5H1.167v8.948Zm10.5-11.281H8.75L7.773 0h-3.88l-.976 1.167H0v1.166h11.667V1.167Z" fill="#ED6368"/></svg>
                            <button title='Delete comment' type='button' class='js-delete-mobile'>Delete</button>
                           </div>
-                          <div class=' '> 
+                          <div class='display-flex align-items-center '> 
                            <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M13.479 2.872 11.08.474a1.75 1.75 0 0 0-2.327-.06L.879 8.287a1.75 1.75 0 0 0-.5 1.06l-.375 3.648a.875.875 0 0 0 .875.954h.078l3.65-.333c.399-.04.773-.216 1.058-.499l7.875-7.875a1.68 1.68 0 0 0-.061-2.371Zm-2.975 2.923L8.159 3.449 9.865 1.7l2.389 2.39-1.75 1.706Z" fill="#5357B6"/></svg>
                            <button title='Edit comment' type='button' class='js-edit-mobile'>Edit</button>
                           </div>
@@ -276,7 +276,7 @@ function getGeneratedHTML(insert,which){
   
 }
 function createParentEl(){
-  const el =document.createElement('article');  // needed?                                          ///
+  const el =document.createElement('article');  // needed for styling.
   return el;
 }
 
@@ -414,7 +414,7 @@ const setCommentScore=(parent,val)=>{
   // needs IDs at lines 139 and 172   =>now lines 155, 189
 
     let parentId = Number(parent.getAttribute('id'));                          
-  console.log('parentid',parentId);
+  
     
   elementsData.newJsonData.comments.forEach((comment)=>{
     if(Number(comment.id) === parentId){
@@ -488,7 +488,21 @@ async function findUser(id){
     }
       
 }
-
+function findUserNonAsync(id){
+    for(const comment of elementsData.newJsonData.comments){                   
+      if(Number(comment.id) === Number(id)){
+        return comment.user.username;
+      }
+      
+      if(comment.replies.length>0){
+        for(const reply of comment.replies){
+          if(Number(reply.id) === Number(id)){
+            return reply.user.username;
+          }
+        }
+      }
+    }
+}
 
 
 
@@ -507,37 +521,40 @@ function addButtonsEvents(){
   //upvote/downvote apply to both currentuser comments and other user comments.      //id at line 144.
   //user clicks upvote button, either in mobile or desktop view
   let whichupvote= (document.getElementById('main').offsetWidth<=768)? 'upvote-mobile':'upvote-desktop';
-  console.log('whichupvote:',whichupvote);
   let upvoteHTMLCollection = document.getElementsByClassName(whichupvote);
   let upvoteNodes = Array.from(upvoteHTMLCollection);
 
   let jsScore =  (document.getElementById('main').offsetWidth<=768)? '.js-score-mobile':'.js-score-desktop';
-  console.log('jssocore',jsScore);
 
 
   upvoteNodes.forEach((btn,index)=>{  
+      const upid = btn.closest('div').id;
+      const upuser = findUserNonAsync(upid);
+      if(upuser ===elementsData.currentUser.username){
+          btn.classList.add('not-allowed');
+      }
       btn.addEventListener('click', async (event) => {
           const id = event.target.closest('div').id;
           let user = await findUser(id);
           if(user!== elementsData.currentUser.username){
-            let scoreEl = event.target.closest(jsScore).querySelector('span');
-            let scoreVal = scoreEl.getAttribute('data-value');
-            scoreEl.setAttribute('data-value',++scoreVal);
-            scoreEl.textContent= scoreVal;
-            
-            let parent='';
-            if(document.getElementById('main').offsetWidth>768){
-               //desktop
-                parent =event.target.parentElement.parentElement.parentElement.parentElement.parentElement;    
-            }else{
-               //mobile
-              parent =event.target.parentElement.parentElement.parentElement.parentElement;
-            }
-            //update comment score in elementsData.newJsonData.
-            setCommentScore(parent,scoreVal);                                                 
-            sortByScore();  
-                                                   
+              let scoreEl = event.target.closest(jsScore).querySelector('span');
+              let scoreVal = scoreEl.getAttribute('data-value');
+              scoreEl.setAttribute('data-value',++scoreVal);
+              scoreEl.textContent= scoreVal;
+              
+              let parent='';
+              if(document.getElementById('main').offsetWidth>768){
+                //desktop
+                  parent =event.target.parentElement.parentElement.parentElement.parentElement.parentElement;    
+              }else{
+                //mobile
+                parent =event.target.parentElement.parentElement.parentElement.parentElement;
               }
+              //update comment score in elementsData.newJsonData.
+              setCommentScore(parent,scoreVal);                                                 
+              sortByScore();  
+                                                   
+          }
         },
         false
       );
@@ -548,25 +565,30 @@ function addButtonsEvents(){
   let downvoteNodes = Array.from(downvoteHTMLCollection);
 
   downvoteNodes.forEach((btn,index)=>{
-           btn.addEventListener('click',async (event)=>{
+          const downid = btn.closest('div').id;
+          const downuser = findUserNonAsync(downid);
+          if(downuser ===elementsData.currentUser.username){
+              btn.classList.add('not-allowed');
+          }
+          btn.addEventListener('click',async (event)=>{
               const id = event.target.closest('div').id;
-          let user = await findUser(id);
-          if(user!== elementsData.currentUser.username){
-            let scoreEl = event.target.closest(jsScore).querySelector('span');
-            let scoreVal = scoreEl.getAttribute('data-value');
-            scoreEl.setAttribute('data-value',--scoreVal);
-            scoreEl.textContent= scoreVal;
-          
-            let parent='';
-            if(document.getElementById('main').offsetWidth>768){
-               //if desktop
-                 parent =event.target.parentElement.parentElement.parentElement.parentElement.parentElement;
-            }else{
-               parent =event.target.parentElement.parentElement.parentElement.parentElement;
-            }
-            //update comment score in elementsData.newJsonData.
-            setCommentScore(parent,scoreVal);
-            sortByScore();
+              let user = await findUser(id);
+              if(user!== elementsData.currentUser.username){
+                  let scoreEl = event.target.closest(jsScore).querySelector('span');
+                  let scoreVal = scoreEl.getAttribute('data-value');
+                  scoreEl.setAttribute('data-value',--scoreVal);
+                  scoreEl.textContent= scoreVal;
+                
+                  let parent='';
+                  if(document.getElementById('main').offsetWidth>768){
+                    //if desktop
+                      parent =event.target.parentElement.parentElement.parentElement.parentElement.parentElement;
+                  }else{
+                    parent =event.target.parentElement.parentElement.parentElement.parentElement;
+                  }
+                  //update comment score in elementsData.newJsonData.
+                  setCommentScore(parent,scoreVal);
+                  sortByScore();
               }
         },
         false
@@ -668,7 +690,7 @@ function addButtonsEvents(){
   
   
     EditNodes.forEach((btn,index)=>{
-      let updateEvent ='';
+      let updateEvent =''; 
       textareaNodes[index].addEventListener('input',(event)=>{
           updateEvent= event;
           
@@ -676,6 +698,8 @@ function addButtonsEvents(){
       btn.addEventListener("click", ()=>{
         //edit button is pressed, toggle textarea to disabled/abled or abled/disabled.
         toggleBtns(textareaNodes,jscancelNodes,jsupdateNodes,index);
+        textareaNodes[index].classList.toggle('edit-border'); 
+        console.log(textareaNodes[index]);
       });
       let firstspace=''; let id='';
       (jsupdateNodes[index]).addEventListener('click',()=>{
