@@ -188,7 +188,7 @@ function getGeneratedHTML(insert,which){
                     <img src='${elementsData.currentUser.image.png}' alt='User avatar' width='64' height='64'> 
                     <label for='${textlabel1}' class='visually-hidden'>User comment</label>
                     <textarea id='${textlabel1}' class='w-100 off-white-background' ></textarea>
-                    <button title='Submit reply' type='button' class='js-submit-reply'>Reply</button>
+                     <button title='Submit reply' type='submit' class='js-submit-reply'>Reply</button>
                      <button title='Cancel reply' type='button' class='js-cancel-reply'>Cancel</button>
                 </form>
                 
@@ -236,7 +236,7 @@ function getGeneratedHTML(insert,which){
                       
                     </div>
                     <div class='display-flex'>
-                      <button title='Update comment' type='button' class='js-update hidden'>Update</button>
+                      <button title='Update comment' type='submit' class='js-update hidden'>Update</button>
                       <button title='Cancel update comment' type='button' class='js-edit-cancel hidden'>Cancel</button>
                     </div>
                   </form>
@@ -292,10 +292,10 @@ function displayMessages(){
           const commentchild = (comment.user.username === elementsData.newJsonData.currentUser.username)?getGeneratedHTML(comment,'currentuser-comment'):getGeneratedHTML(comment,'comment');
           const el = createParentEl();
           el.innerHTML =  commentchild;
-                    elementsData.messagesHTML += el.outerHTML;
+          elementsData.messagesHTML += el.outerHTML;
             
           
-                    if(comment.replies.length>0){
+         if(comment.replies.length>0){
             
             elementsData.nested=true;
             comment.replies.forEach(reply=>{
