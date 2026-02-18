@@ -187,7 +187,7 @@ function getGeneratedHTML(insert,which){
                 <form class='display-flex js-display-reply' method='post' action='#'>
                     <img src='${elementsData.currentUser.image.png}' alt='User avatar' width='64' height='64'> 
                     <label for='${textlabel1}' class='visually-hidden'>User comment</label>
-                    <textarea id='${textlabel1}' class='w-100 off-white-background' ></textarea>
+                    <textarea id='${textlabel1}' class='w-100 off-white-background border' ></textarea>
                      <button title='Submit reply' type='submit' class='js-submit-reply'>Reply</button>
                      <button title='Cancel reply' type='button' class='js-cancel-reply'>Cancel</button>
                 </form>
@@ -598,7 +598,7 @@ function addButtonsEvents(){
     
     //all the rest is currentUser only
   document.querySelector('.js-add-comment').addEventListener('click',(event)=>{
-       
+      event.preventDefault();
       //add new currentUser comment 
       const content = event.target.previousElementSibling.value;
       const newComment = returnComment(content,'replies');
@@ -610,6 +610,7 @@ function addButtonsEvents(){
   
   document.querySelectorAll('.js-submit-reply').forEach((btn,btnIndex)=>{
       btn.addEventListener('click',(event)=>{
+         event.preventDefault();
         //The currentUser has clicked the reply button to submit a  reply
         const content = event.target.previousElementSibling.value;
         const inReplyToThisComment= event.target.parentElement.parentElement.previousElementSibling;
@@ -644,15 +645,18 @@ function addButtonsEvents(){
       });
   });
 
+
+  
   //user clicks reply button, either in mobile or desktop view
   let whichreply= (document.getElementById('main').offsetWidth<=768)? 'js-reply-mobile':'js-reply-desktop';
   console.log(whichreply);
-    let replyHTMLCollection = document.getElementsByClassName(whichreply);
+  let replyHTMLCollection = document.getElementsByClassName(whichreply);
   let replyNodes = Array.from(replyHTMLCollection);
   replyNodes.forEach((btn,index)=>{
       btn.addEventListener("click", (event)=>{
-        //The currentUser has clicked the 'reply' button in a comment   
-        toggleReplyArea(event); 
+          //The currentUser has clicked the 'reply' button in a comment   
+          toggleReplyArea(event); 
+
       });
   });
   
@@ -671,7 +675,7 @@ function addButtonsEvents(){
   //currentuser's old reply textarea should be disabled
   currentUserReplyNodes.forEach((textarea)=>{
          textarea.setAttribute('aria-disabled','true');
-         textarea.setAttribute('disabled','true');
+         textarea.setAttribute('disabled','');
   });
 
 
@@ -705,7 +709,11 @@ function addButtonsEvents(){
         }
       });
       let firstspace=''; let id='';
-      (jsupdateNodes[index]).addEventListener('click',()=>{
+      (jsupdateNodes[index]).addEventListener('click',(event)=>{
+           event.preventDefault();
+           if(textareaNodes[index].classList.contains('edit-border')){
+              textareaNodes[index].classList.remove('edit-border'); 
+          }
         //the user clicks the current update button
           id = Number(textareaNodes[index].closest('div').id);             //id at line 209  Id at line 174,212,and 227(textareas) is purely for the associated label.
           let usethisIndex= index;
