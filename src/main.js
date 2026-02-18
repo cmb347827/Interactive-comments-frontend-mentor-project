@@ -1,6 +1,6 @@
 
 'use strict'; 
-import {sub,formatDistance, daysToWeeks} from 'date-fns';
+import {sub,formatDistance} from 'date-fns';
 import { Random } from "random-js";
 
 
@@ -47,7 +47,7 @@ function saveToStorage(key,which){
 }
 
 function loadFromStorage(key){
-  let tryget = localStorage.getItem(key);
+    const tryget = localStorage.getItem(key);
   
     if(tryget){
     elementsData.newJsonData = JSON.parse(tryget);
@@ -133,7 +133,7 @@ function getGeneratedHTML(insert,which){
   if(which==='reply'){
     if(insert.replyingTo.startsWith('@')){
       //@ has been added previously to the currentuser inner reply, no need to add it again.
-          insert.replyingTo= insert.replyingTo;
+         // insert.replyingTo= insert.replyingTo;  do nothing
     }else{
       //will add teh @ to the currentuser inner reply, if it's not added yet.
       insert.replyingTo= `@${insert.replyingTo}`;
