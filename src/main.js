@@ -772,14 +772,14 @@ function addButtonsEvents(){
   deleteNodes.forEach((btn,index)=>{
     btn.addEventListener("click", (event)=>{
       //delete currentuser reply button is pressed
-      //pop-up dialog asks to make sure to delete.
-                                                                                           //line 198 id
+      //pop-up dialog asks to make sure to delete                                                                               //line 198 id
       elementsData.deleteId=  event.target.closest('div').id;
       dialog.showModal();
 
     });
   });
     deletecomment.addEventListener('click',(event)=>{
+      event.preventDefault();
     //delete comment with id at elementsData.deleteId 
     elementsData.newJsonData.comments.forEach((comment,outerindex)=>{
         
