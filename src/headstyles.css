@@ -118,7 +118,7 @@ textarea{
 }
 .you{
     background-color: hsl(216, 100%, 50%);
-    width: 50px;
+    width: 3.125em;
     border-radius:0.9375em;
     margin-right: 0.9375em;
     text-align:center;

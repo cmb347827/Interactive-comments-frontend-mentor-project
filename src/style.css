@@ -147,7 +147,9 @@ main{
     background-color:hsl(0, 0%, 100%);
     
     /*speficify 0,0,2*/
-   
+    &::backdrop {
+       background-color: rgb(0 0 10% / 25%);
+    }
   }
  
   @media (min-width:49.0625em){
@@ -171,7 +173,7 @@ textarea:hover{
 .js-delete-mobile:hover,.js-delete-desktop:hover{
      color: hsl(355, 74%, 71%);
 }
-#bottom-footer {
+footer {
   .attribution {
     font-size: 0.5em;
     text-align: center;
