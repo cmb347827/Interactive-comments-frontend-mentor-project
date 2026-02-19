@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Screenshot
 
-[screenshot](./public/images/screenshot.PNG "screenshot")
+[screenshot](screenshot.PNG "screenshot")
 
 ### Links
 
