@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Screenshot
 
-[screenshot](.public/images/screenshot.PNG "screenshot")
+[screenshot](public/images/screenshot.PNG "screenshot")
 
 ### Links
 
@@ -65,7 +65,7 @@ Users should be able to:
 - As I had to restart this app many times with a new repo and new everything , the comments in my repo are lacking therefore.
 
 
-todo:   js comments, readme.
+
 
 ### Continued development
 
